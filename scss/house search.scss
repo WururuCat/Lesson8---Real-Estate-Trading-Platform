@@ -1,7 +1,5 @@
 /* ==================================================
    顏色
-   如果之後有 _variables.scss
-   可以把這些顏色移到 _variables.scss
 ================================================== */
 
 :root {
@@ -10,54 +8,32 @@
   --light-green: #a8c58e;
 
   --orange: #ff9850;
-  --light-orange: #ffd5b2;
 
   --bg: #f7f7f5;
-
-  --gray: #777;
-  --light-gray: #eeeeea;
-
   --white: #ffffff;
 }
-
-
-/* ==================================================
-   基本設定
-================================================== */
-
-* {
-  box-sizing: border-box;
-}
-
 
 html,
 body {
   margin: 0;
   padding: 0;
-
   width: 100%;
-
   overflow-x: hidden;
 }
-
 
 body {
   font-family:
     "Noto Sans TC",
     "Microsoft JhengHei",
     sans-serif;
-
-  color: var(--dark-green);
-
   background: var(--bg);
+  color: var(--dark-green);
 }
-
 
 img {
   display: block;
   max-width: 100%;
 }
-
 
 a {
   text-decoration: none;
@@ -73,76 +49,47 @@ a {
 
   width: 100%;
 
-  padding: 5px 5px 0;
+  padding: 18px 16px 0;
 
   background: var(--bg);
-
-  overflow: hidden;
 }
 
 
-.hero-container {
+/* ==================================================
+   Hero 大容器
+================================================== */
+
+.hero-box {
   position: relative;
 
-  min-height: 450px;
+  width: 100%;
+  height: 400px;
 
-  padding: 0;
+  overflow: visible;
 }
 
 
 /* ==================================================
-   Logo
+   Hero 背景圖片
 ================================================== */
 
-.logo {
+.hero-bg {
   position: absolute;
 
-  left: 15px;
-  top: 15px;
+  left: 0;
+  top: 0;
 
-  z-index: 5;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 5px;
-
-  color: var(--main-green);
-
-  font-size: 13px;
-
-  font-weight: 800;
-}
-
-
-.logo i {
-  font-size: 17px;
-}
-
-
-/* ==================================================
-   Hero 圖片
-================================================== */
-
-.hero-image {
-  width: calc(100% - 10px);
-  height: 380px;
-
-  position: absolute;
-
-  left: 5px;
-  top: 5px;
+  width: 100%;
+  height: 330px;
 
   overflow: hidden;
 
-  background: #ddd;
+  border-radius: 0 25px 25px 25px;
 
-  border-radius: 12px;
+  z-index: 1;
 }
 
-
-.hero-image img {
+.hero-bg img {
   width: 100%;
   height: 100%;
 
@@ -151,642 +98,340 @@ a {
 
 
 /* ==================================================
-   Hero 不規則圖形
+   左上 Logo 白色區塊
 ================================================== */
 
-.hero-shape {
+.hero-logo {
   position: absolute;
-
-  width: 220px;
 
   left: 0;
   top: 0;
 
-  z-index: 3;
-}
-
-
-/* ==================================================
-   上方選單
-================================================== */
-
-.top-menu {
-  position: absolute;
-
-  right: 20px;
-  top: 18px;
-
-  z-index: 6;
+  width: 178px;
+  height: 73px;
 
   display: flex;
-
   align-items: center;
+  justify-content: center;
 
-  gap: 16px;
+  background: white;
 
-  padding: 8px 10px;
-
-  background: var(--white);
-
-  border-radius: 8px;
-}
-
-
-.top-menu a {
-  color: var(--dark-green);
-
-  font-size: 7px;
-
-  font-weight: 700;
-}
-
-
-.top-menu button {
-  padding: 6px 14px;
-
-  border: 0;
-
-  border-radius: 5px;
-
-  background: var(--orange);
-
-  color: var(--white);
-
-  font-size: 7px;
-}
-
-
-/* ==================================================
-   Hero 文字
-================================================== */
-
-.hero-text {
-  position: absolute;
-
-  left: 20px;
-  top: 105px;
+  border-radius: 0 0 22px 0;
 
   z-index: 5;
 }
 
 
-.hero-text h1 {
-  margin: 0 0 8px;
+/* Logo */
+
+.hero-logo img {
+  width: 130px;
+  height: auto;
+}
+
+
+/* ==================================================
+   Logo 白色區塊右下角的小凹角
+================================================== */
+
+.hero-logo::after {
+  content: "";
+
+  position: absolute;
+
+  right: -1px;
+  bottom: -25px;
+
+  width: 28px;
+  height: 28px;
+
+  background: white;
+
+  border-radius: 0 0 0 28px;
+}
+
+
+/* ==================================================
+   右上選單
+================================================== */
+
+.hero-menu {
+  position: absolute;
+
+  top: 17px;
+  right: 20px;
+
+  z-index: 6;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 7px 12px;
+
+  background: white;
+
+  border-radius: 8px;
+}
+
+
+/* 選單文字 */
+
+.hero-menu a {
+  color: var(--dark-green);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.hero-menu a:hover {
+  color: var(--orange);
+}
+
+
+/* 登入註冊 */
+
+.hero-menu button {
+  padding: 8px 15px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: var(--orange);
+
+  color: white;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* ==================================================
+   手機漢堡
+================================================== */
+
+.hamburger {
+  display: none;
+
+  position: absolute;
+
+  right: 15px;
+  top: 15px;
+
+  z-index: 10;
+
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: white;
 
   color: var(--dark-green);
 
-  font-size: 20px;
-
-  font-weight: 800;
+  font-size: 25px;
 }
 
+
+/* ==================================================
+   Hero 文字白色區塊
+================================================== */
+
+.hero-text {
+  position: absolute;
+
+  left: 22px;
+  top: 133px;
+
+  width: 300px;
+  min-height: 140px;
+
+  padding: 25px 22px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  border-radius: 25px;
+
+  z-index: 4;
+}
+
+
+/* 標題 */
+
+.hero-text h1 {
+  margin: 0 0 10px;
+
+  color: var(--dark-green);
+
+  font-size: 31px;
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+/* 說明 */
 
 .hero-text p {
   margin: 0;
 
-  color: #666;
+  color: #777;
 
-  font-size: 7px;
+  font-size: 12px;
+  font-weight: 600;
 
   line-height: 1.8;
 }
 
 
 /* ==================================================
-   搜尋區
+   搜尋框
 ================================================== */
 
 .search-box {
   position: absolute;
 
-  left: 5px;
+  left: 0;
   bottom: 0;
 
-  z-index: 10;
+  width: 68%;
 
-  width: 62%;
+  min-height: 70px;
 
-  min-height: 45px;
+  padding: 14px 14px 12px;
 
-  display: flex;
+  background: white;
 
-  align-items: flex-end;
+  border-radius: 0 22px 0 0;
 
-  gap: 8px;
-
-  padding: 8px 12px;
-
-  background: var(--white);
-
-  border-radius: 0 18px 0 0;
+  z-index: 8;
 }
 
 
-.search-item {
-  flex: 1;
+/* Bootstrap row */
 
-  min-width: 0;
+.search-box .row {
+  align-items: end;
 }
 
 
-.search-item label {
+/* label */
+
+.search-box label {
   display: block;
 
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 
-  font-size: 6px;
+  color: #666;
 
+  font-size: 8px;
   font-weight: 700;
 }
 
 
+/* ==================================================
+   Select
+================================================== */
+
 .select-box {
-  height: 23px;
+  position: relative;
+
+  height: 30px;
 
   display: flex;
-
-  align-items: center;
-
-  gap: 4px;
-
-  padding: 0 7px;
-
-  border: 1px solid #ddd;
-
-  border-radius: 4px;
-
-  color: #aaa;
-
-  font-size: 6px;
-
-  white-space: nowrap;
-}
-
-
-.select-box i:last-child {
-  margin-left: auto;
-
-  color: var(--dark-green);
-}
-
-
-.search-btn {
-  height: 23px;
-
-  padding: 0 18px;
-
-  border: 0;
-
-  border-radius: 4px;
-
-  background: var(--main-green);
-
-  color: white;
-
-  font-size: 6px;
-
-  white-space: nowrap;
-}
-
-
-/* ==================================================
-   房源區
-================================================== */
-
-.house-section {
-  position: relative;
-
-  min-height: 720px;
-
-  padding: 55px 0 70px;
-
-  background: var(--bg);
-
-  overflow: hidden;
-}
-
-
-/* 背景不規則圖形 */
-
-.house-bg {
-  position: absolute;
-
-  right: -50px;
-  top: 100px;
-
-  width: 300px;
-
-  z-index: 0;
-}
-
-
-/* ==================================================
-   房源容器
-================================================== */
-
-.house-container {
-  position: relative;
-
-  z-index: 2;
-
-  max-width: 750px;
-}
-
-
-/* ==================================================
-   標題
-================================================== */
-
-.house-title {
-  position: relative;
-
-  width: 240px;
-  height: 65px;
-
-  margin-bottom: 10px;
-}
-
-
-.title-shape {
-  position: absolute;
-
-  left: 0;
-  top: 0;
-
-  width: 95px;
-
-  height: 65px;
-
-  object-fit: contain;
-}
-
-
-.title-text {
-  position: absolute;
-
-  left: 45px;
-  top: 15px;
-
-  z-index: 2;
-}
-
-
-.title-text h2 {
-  margin: 0;
-
-  color: var(--dark-green);
-
-  font-size: 17px;
-
-  font-weight: 800;
-}
-
-
-.title-text p {
-  margin: 3px 0 0;
-
-  color: #777;
-
-  font-size: 6px;
-}
-
-
-/* ==================================================
-   篩選
-================================================== */
-
-.filter-buttons {
-  display: flex;
-
-  justify-content: flex-end;
-
-  gap: 6px;
-
-  margin-bottom: 15px;
-}
-
-
-.filter-buttons button {
-  min-width: 35px;
-
-  padding: 3px 8px;
-
-  border: 1px solid #d5d5d0;
-
-  border-radius: 20px;
-
-  background: white;
-
-  color: #777;
-
-  font-size: 6px;
-}
-
-
-.filter-buttons button.active {
-  border-color: var(--main-green);
-
-  background: var(--main-green);
-
-  color: white;
-}
-
-
-/* ==================================================
-   房源卡片
-================================================== */
-
-.house-list {
-  row-gap: 18px;
-}
-
-
-.house-card {
-  width: 100%;
-}
-
-
-.house-img {
-  position: relative;
-
-  width: 100%;
-
-  height: 95px;
-
-  overflow: hidden;
-
-  border-radius: 10px;
-
-  background: #ddd;
-}
-
-
-.house-img img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-
-.house-img span {
-  position: absolute;
-
-  right: 5px;
-  bottom: 5px;
-
-  padding: 3px 7px;
-
-  border-radius: 10px;
-
-  background: rgba(255, 255, 255, 0.9);
-
-  color: var(--dark-green);
-
-  font-size: 5px;
-}
-
-
-.house-card h3 {
-  margin: 7px 0 2px;
-
-  color: var(--dark-green);
-
-  font-size: 8px;
-
-  font-weight: 800;
-}
-
-
-.location {
-  color: #999;
-
-  font-size: 5px;
-}
-
-
-.location i {
-  margin-right: 2px;
-}
-
-
-.price {
-  margin-top: 5px;
-
-  color: var(--dark-green);
-
-  font-size: 7px;
-}
-
-
-.price strong {
-  font-size: 12px;
-}
-
-
-.tags {
-  display: flex;
-
-  gap: 4px;
-
-  margin-top: 5px;
-}
-
-
-.tags span {
-  padding: 2px 7px;
-
-  border: 1px solid #ddd;
-
-  border-radius: 10px;
-
-  background: white;
-
-  color: #888;
-
-  font-size: 5px;
-}
-
-
-/* ==================================================
-   分頁
-================================================== */
-
-.pagination {
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  gap: 8px;
-
-  margin-top: 30px;
-}
-
-
-.pagination button {
-  padding: 2px 4px;
-
-  border: 0;
-
-  background: transparent;
-
-  color: #aaa;
-
-  font-size: 6px;
-}
-
-
-.pagination .page-active {
-  color: var(--orange);
-
-  font-weight: 800;
-}
-
-
-/* ==================================================
-   Footer
-================================================== */
-
-footer {
-  position: relative;
-
-  min-height: 150px;
-
-  padding: 55px 0 15px;
-
-  background: var(--main-green);
-
-  color: white;
-
-  overflow: hidden;
-}
-
-
-/* Footer 綠色不規則圖形 */
-
-.footer-shape {
-  position: absolute;
-
-  left: 0;
-  bottom: 0;
-
-  width: 55%;
-
-  max-width: 480px;
-
-  z-index: 0;
-}
-
-
-.footer-container {
-  position: relative;
-
-  z-index: 2;
-}
-
-
-/* ==================================================
-   Footer Logo
-================================================== */
-
-.footer-logo {
-  display: flex;
-
   align-items: center;
 
   gap: 5px;
 
-  color: white;
+  padding: 0 8px;
 
-  font-size: 20px;
+  border: 1px solid #d8d8d2;
 
-  font-weight: 800;
+  border-radius: 5px;
+
+  background: white;
+
+  color: #777;
 }
 
 
-.footer-logo i {
-  font-size: 25px;
+/* 左邊 icon */
+
+.select-box > i:first-child {
+  color: var(--main-green);
+
+  font-size: 12px;
+
+  flex-shrink: 0;
 }
 
 
-.copyright {
-  margin: 12px 0 0;
+/* select */
 
-  font-size: 5px;
+.select-box select {
+  width: 100%;
+
+  padding: 0;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #555;
+
+  font-size: 9px;
+
+  appearance: none;
+}
+
+
+/* 右邊箭頭 */
+
+.select-box > i:last-child {
+  color: var(--dark-green);
+
+  font-size: 9px;
+
+  flex-shrink: 0;
+
+  pointer-events: none;
 }
 
 
 /* ==================================================
-   Footer 右邊
+   搜尋按鈕
 ================================================== */
 
-.footer-right {
-  display: flex;
+.search-btn {
+  width: 100%;
+  height: 30px;
 
-  flex-direction: column;
+  margin: 0;
 
-  align-items: flex-end;
-}
+  padding: 0 10px;
 
+  border: 0;
+  border-radius: 5px;
 
-/* IG / FB */
-
-.social {
-  display: flex;
-
-  justify-content: flex-end;
-
-  align-items: center;
-
-  gap: 8px;
-
-  margin-bottom: 18px;
-}
-
-
-.social a {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  width: 15px;
-  height: 15px;
-
-  border-radius: 50%;
-
-  color: var(--main-green);
-
-  background: white;
-
-  font-size: 8px;
-}
-
-
-.social a:hover {
-  background: var(--orange);
+  background: var(--main-green);
 
   color: white;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  white-space: nowrap;
 }
 
-
-/* Footer 選單 */
-
-.footer-links {
-  display: flex;
-
-  justify-content: flex-end;
-
-  gap: 15px;
-}
-
-
-.footer-links a {
-  color: white;
-
-  font-size: 6px;
+.search-btn:hover {
+  background: var(--dark-green);
 }
 
 
@@ -796,30 +441,61 @@ footer {
 
 @media (max-width: 991px) {
 
-  .hero-container {
-    min-height: 420px;
+  .hero {
+    padding: 15px 12px 0;
   }
 
-
-  .hero-image {
-    height: 350px;
+  .hero-box {
+    height: 400px;
   }
 
+  .hero-bg {
+    height: 330px;
+  }
+
+  .hero-logo {
+    width: 160px;
+    height: 68px;
+  }
+
+  .hero-logo img {
+    width: 115px;
+  }
+
+  .hero-menu {
+    right: 15px;
+
+    gap: 12px;
+  }
+
+  .hero-menu a {
+    font-size: 9px;
+  }
+
+  .hero-menu button {
+    font-size: 9px;
+
+    padding: 7px 12px;
+  }
+
+  .hero-text {
+    left: 20px;
+    top: 130px;
+
+    width: 280px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 11px;
+  }
 
   .search-box {
     width: 75%;
   }
-
-
-  .house-container {
-    max-width: 680px;
-  }
-
-
-  .house-img {
-    height: 100px;
-  }
-
 }
 
 
@@ -830,220 +506,165 @@ footer {
 @media (max-width: 767px) {
 
   .hero {
-    padding: 5px 5px 0;
+    padding: 8px 8px 0;
+  }
+
+  .hero-box {
+    height: 620px;
   }
 
 
-  .hero-container {
-    min-height: 600px;
+  /* --------------------------------
+     Hero 圖片
+  -------------------------------- */
+
+  .hero-bg {
+    width: 100%;
+    height: 390px;
+
+    border-radius: 0 18px 18px 18px;
   }
 
 
-  .hero-image {
-    height: 330px;
+  /* --------------------------------
+     Logo
+  -------------------------------- */
 
-    width: calc(100% - 10px);
+  .hero-logo {
+    width: 145px;
+    height: 62px;
+
+    border-radius: 0 0 18px 0;
+  }
+
+  .hero-logo img {
+    width: 105px;
+  }
+
+  .hero-logo::after {
+    bottom: -20px;
+
+    width: 23px;
+    height: 23px;
   }
 
 
-  .logo {
-    left: 15px;
-    top: 15px;
+  /* --------------------------------
+     電腦選單隱藏
+  -------------------------------- */
+
+  .hero-menu {
+    display: none;
   }
 
 
-  .top-menu {
-    right: 15px;
+  /* --------------------------------
+     漢堡
+  -------------------------------- */
 
-    gap: 7px;
+  .hamburger {
+    display: flex;
 
-    padding: 6px 7px;
+    align-items: center;
+    justify-content: center;
   }
 
 
-  .top-menu a {
-    font-size: 5px;
-  }
-
-
-  .top-menu button {
-    padding: 5px 8px;
-
-    font-size: 5px;
-  }
-
+  /* --------------------------------
+     Hero 文字
+  -------------------------------- */
 
   .hero-text {
     left: 20px;
-    top: 105px;
-  }
+    top: 145px;
 
+    width: calc(100% - 40px);
+
+    min-height: auto;
+
+    padding: 22px 20px;
+
+    border-radius: 20px;
+  }
 
   .hero-text h1 {
-    font-size: 20px;
+    font-size: 26px;
   }
-
 
   .hero-text p {
-    font-size: 7px;
+    font-size: 11px;
+
+    line-height: 1.8;
   }
 
 
-  /* 搜尋變成兩排 */
+  /* 搜尋框*/
 
   .search-box {
-    width: calc(100% - 10px);
-
-    left: 5px;
-
+    left: 0;
     bottom: 0;
 
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 7px;
-
-    padding: 12px;
-
-    border-radius: 12px 12px 0 0;
-  }
-
-
-  .search-btn {
     width: 100%;
+
+    padding: 18px;
+
+    border-radius: 18px 18px 0 0;
   }
 
 
-  .search-item label {
-    font-size: 6px;
+  .search-box .row {
+    row-gap: 10px;
   }
 
-
-  /* 房源 */
-
-  .house-section {
-    padding-top: 45px;
+  .search-box label {
+    font-size: 10px;
   }
 
-
-  .house-title {
-    margin: 0 auto 15px;
+  .select-box {
+    height: 38px;
   }
 
-
-  .filter-buttons {
-    justify-content: center;
-
-    margin-bottom: 25px;
-  }
-
-
-  .house-list {
-    row-gap: 25px;
-  }
-
-
-  .house-img {
-    height: 180px;
-  }
-
-
-  .house-card h3 {
+  .select-box select {
     font-size: 11px;
   }
 
+  .search-btn {
+    height: 38px;
 
-  .location {
-    font-size: 7px;
+    font-size: 11px;
   }
-
-
-  .price {
-    font-size: 8px;
-  }
-
-
-  .price strong {
-    font-size: 14px;
-  }
-
-
-  .tags span {
-    font-size: 6px;
-  }
-
-
-  /* Footer */
-
-  footer {
-    padding: 45px 0 20px;
-  }
-
-
-  .footer-right {
-    align-items: flex-start;
-
-    margin-top: 25px;
-  }
-
-
-  .social {
-    justify-content: flex-start;
-  }
-
-
-  .footer-links {
-    justify-content: flex-start;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-  }
-
 }
 
 
-/* ==================================================
-   小手機
-================================================== */
+/* 小手機*/
 
 @media (max-width: 400px) {
 
-  .hero-container {
-    min-height: 580px;
+  .hero-box {
+    height: 600px;
   }
 
-
-  .hero-image {
-    height: 300px;
+  .hero-bg {
+    height: 360px;
   }
 
+  .hero-text {
+    top: 130px;
+  }
 
   .hero-text h1 {
-    font-size: 18px;
+    font-size: 23px;
   }
 
-
-  .search-box {
-    grid-template-columns: 1fr 1fr;
+  .hero-text p {
+    font-size: 10px;
   }
 
-
-  .house-img {
-    height: 150px;
+  .hero-logo {
+    width: 130px;
   }
 
-
-  .filter-buttons {
-    gap: 4px;
+  .hero-logo img {
+    width: 95px;
   }
-
-
-  .filter-buttons button {
-    min-width: 30px;
-
-    padding: 3px 6px;
-  }
-
 }
