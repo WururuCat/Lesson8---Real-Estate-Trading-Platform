@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISHIMA｜好房查詢</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./scss/reset.css" />
+    <link rel="stylesheet" href="./scss/house search.css" />
+  </head>
+
+  <body>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-container">
+        <!-- Hero 背景圖片 -->
+        <div class="hero-image">
+          <img src="./img/search-hero-image.png" alt="好房查詢" />
+        </div>
+
+        <!-- 左上 Logo -->
+        <div class="logo-box">
+          <a href="#" class="logo">
+            <img src="./img/logo.png" alt="logo" />
+          </a>
+        </div>
+
+        <!-- 桌機 / 手機導覽列 -->
+        <nav class="navbar">
+          <!-- 桌機選單 -->
+          <div class="desktop-menu">
+            <a href="#">好房查詢</a>
+
+            <a href="#">房貸試算</a>
+
+            <button>登入/註冊</button>
+          </div>
+
+          <!-- 漢堡按鈕 -->
+          <button
+            class="hamburger"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </nav>
+
+        <!-- 手機側邊選單 -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">ISHIMA</h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <a href="#">好房查詢</a>
+
+            <a href="#">房貸試算</a>
+
+            <button>登入 / 註冊</button>
+          </div>
+        </div>
+
+        <!-- Hero 文字 -->
+        <div class="hero-text">
+          <h1>好房查詢</h1>
+
+          <p>
+            上千筆精選房源、專業預約看房服務，即時房貸試算，
+            <br />
+            讓您輕鬆找到理想住宅
+          </p>
+        </div>
+
+        <!-- 搜尋 -->
+        <div class="search-box">
+          <!-- 地區 -->
+          <div class="search-item">
+            <label>地區</label>
+
+            <div class="dropdown">
+              <button
+                class="select-box dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <i class="bi bi-geo-alt"></i>
+                <span>請選擇地區</span>
+              </button>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <button class="dropdown-item">台北市</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">新北市</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">桃園市</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">台中市</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 房型 -->
+          <div class="search-item">
+            <label>房型</label>
+
+            <div class="dropdown">
+              <button
+                class="select-box dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <i class="bi bi-house"></i>
+                <span>請選擇房型</span>
+              </button>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <button class="dropdown-item">透天</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">公寓</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">華廈</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">別墅</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 房間數 -->
+          <div class="search-item">
+            <label>房間數</label>
+
+            <div class="dropdown">
+              <button
+                class="select-box dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <i class="bi bi-door-open"></i>
+                <span>請選擇房間數</span>
+              </button>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <button class="dropdown-item">1 房</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">2 房</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">3 房</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">4 房以上</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 價格 -->
+          <div class="search-item">
+            <label>價格</label>
+
+            <div class="dropdown">
+              <button
+                class="select-box dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <i class="bi bi-currency-dollar"></i>
+                <span>請選擇價格區間</span>
+              </button>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <button class="dropdown-item">500 萬以下</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">500～1000 萬</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">1000～1500 萬</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">1500～2000 萬</button>
+                </li>
+
+                <li>
+                  <button class="dropdown-item">2000 萬以上</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 搜尋 -->
+          <button class="search-btn">
+            搜尋房源
+
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ==================================================
+       房源列表
+  ================================================== -->
+
+    <section class="house-section">
+      <!-- 背景不規則白色圖形 -->
+      <img src="" alt="" class="house-bg" />
+      <div class="container house-container">
+        <!-- 標題 -->
+        <div class="house-title">
+          <!-- 左邊橘色不規則圖形 -->
+          <img src="./img/display.png" alt="" class="title-shape" />
+          <div class="title-text">
+            <h2>精選房源</h2>
+            <p>為您精選優質住宅，輕鬆找到理想家</p>
+          </div>
+        </div>
+
+        <!-- 篩選按鈕 -->
+
+        <div class="filter-buttons">
+          <button class="active">全部</button>
+          <button>透天</button>
+          <button>公寓</button>
+          <button>華廈</button>
+          <button>別墅</button>
+        </div>
+
+        <!-- ==================================================
+           房源卡片
+      ================================================== -->
+
+        <div class="row house-list">
+          <!-- 1 -->
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="house-card">
+              <div class="house-img">
+                <img src="./img/search-house1.png" alt="景觀別墅" />
+
+                <span>景觀</span>
+              </div>
+
+              <h3>景觀別墅</h3>
+
+              <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                台北市
+              </div>
+
+              <div class="price">NT$ <strong>950</strong> 萬</div>
+
+              <div class="tags">
+                <span>3房</span>
+                <span>2廳</span>
+                <span>2衛</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="house-card">
+              <div class="house-img">
+                <img src="./img/search-house2.png" alt="溫馨住宅" />
+
+                <span>熱門</span>
+              </div>
+
+              <h3>溫馨住宅</h3>
+
+              <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                台北市
+              </div>
+
+              <div class="price">NT$ <strong>1,700</strong> 萬</div>
+
+              <div class="tags">
+                <span>3房</span>
+                <span>2廳</span>
+                <span>2衛</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="house-card">
+              <div class="house-img">
+                <img src="./img/search-house3.png" alt="現代簡約" />
+
+                <span>推薦</span>
+              </div>
+
+              <h3>現代簡約</h3>
+
+              <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                新北市
+              </div>
+
+              <div class="price">NT$ <strong>1,500</strong> 萬</div>
+
+              <div class="tags">
+                <span>3房</span>
+                <span>2廳</span>
+                <span>2衛</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="house-card">
+              <div class="house-img">
+                <img src="./img/search-house4.png" alt="綠意美宅" />
+
+                <span>推薦</span>
+              </div>
+
+              <h3>綠意美宅</h3>
+
+              <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                新北市
+              </div>
+
+              <div class="price">NT$ <strong>1,200</strong> 萬</div>
+
+              <div class="tags">
+                <span>3房</span>
+                <span>2廳</span>
+                <span>1衛</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="house-card">
+              <div class="house-img">
+                <img src="./img/search-house5.png" alt="藝術豪宅" />
+
+                <span>豪宅</span>
+              </div>
+
+              <h3>藝術豪宅</h3>
+
+              <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                台北市
+              </div>
+
+              <div class="price">NT$ <strong>1,150</strong> 萬</div>
+
+              <div class="tags">
+                <span>3房</span>
+                <span>2廳</span>
+                <span>2衛</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="house-card">
+              <div class="house-img">
+                <img src="./img/search-house6.png" alt="山景美宅" />
+
+                <span>景觀</span>
+              </div>
+
+              <h3>山景美宅</h3>
+
+              <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                新北市
+              </div>
+
+              <div class="price">NT$ <strong>1,000</strong> 萬</div>
+
+              <div class="tags">
+                <span>2房</span>
+                <span>2廳</span>
+                <span>1衛</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="house-card">
+              <div class="house-img">
+                <img src="./img/search-house7.png" alt="北歐美宅" />
+
+                <span>熱門</span>
+              </div>
+
+              <h3>北歐美宅</h3>
+
+              <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                桃園市
+              </div>
+
+              <div class="price">NT$ <strong>2,000</strong> 萬</div>
+
+              <div class="tags">
+                <span>4房</span>
+                <span>2廳</span>
+                <span>2衛</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 -->
+
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="house-card">
+              <div class="house-img">
+                <img src="./img/search-house8.png" alt="陽光大樓" />
+
+                <span>推薦</span>
+              </div>
+              <h3>陽光大樓</h3>
+              <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                台北市
+              </div>
+              <div class="price">NT$ <strong>2,500</strong> 萬</div>
+              <div class="tags">
+                <span>4房</span>
+                <span>2廳</span>
+                <span>2衛</span>
+              </div>
+            </div>
+          </div>
+          <!-- 9 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="house-card">
+              <div class="house-img">
+                <img src="./img/search-house9.png" alt="現代住宅" />
+                <span>新上架</span>
+              </div>
+              <h3>現代住宅</h3>
+              <div class="location">
+                <i class="bi bi-geo-alt"></i>
+                新北市
+              </div>
+              <div class="price">NT$ <strong>1,500</strong> 萬</div>
+              <div class="tags">
+                <span>3房</span>
+                <span>2廳</span>
+                <span>2衛</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 分頁 -->
+
+        <div class="pagination">
+          <button class="page-active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <span>...</span>
+          <button>10</button>
+          <button>
+            <i class="bi bi-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+       FOOTER
+  ================================================== -->
+    <footer>
+      <img src="" alt="" class="footer-shape" />
+      <div class="container footer-container">
+        <div class="row align-items-end">
+          <!-- Logo -->
+          <div class="col-12 col-md-6">
+            <div class="footer-logo">
+              <img src="./img/logo-1.png" alt="logo" />
+            </div>
+            <p class="copyright">
+              copyright © 2026 ISHIMA 房地產 All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="footer-right">
+              <div class="social">
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </div>
+
+              <div class="footer-links">
+                <a href="#">好房查詢</a>
+                <a href="#">房貸試算</a>
+                <a href="#">隱私權政策</a>
+                <a href="#">常見問題</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1049 @@
+/* ==================================================
+   顏色
+   如果之後有 _variables.scss
+   可以把這些顏色移到 _variables.scss
+================================================== */
+
+:root {
+  --main-green: #6b7f5d;
+  --dark-green: #35462e;
+  --light-green: #a8c58e;
+
+  --orange: #ff9850;
+  --light-orange: #ffd5b2;
+
+  --bg: #f7f7f5;
+
+  --gray: #777;
+  --light-gray: #eeeeea;
+
+  --white: #ffffff;
+}
+
+
+/* ==================================================
+   基本設定
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family:
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    sans-serif;
+
+  color: var(--dark-green);
+
+  background: var(--bg);
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+
+  padding: 5px 5px 0;
+
+  background: var(--bg);
+
+  overflow: hidden;
+}
+
+
+.hero-container {
+  position: relative;
+
+  min-height: 450px;
+
+  padding: 0;
+}
+
+
+/* ==================================================
+   Logo
+================================================== */
+
+.logo {
+  position: absolute;
+
+  left: 15px;
+  top: 15px;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: var(--main-green);
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+.logo i {
+  font-size: 17px;
+}
+
+
+/* ==================================================
+   Hero 圖片
+================================================== */
+
+.hero-image {
+  width: calc(100% - 10px);
+  height: 380px;
+
+  position: absolute;
+
+  left: 5px;
+  top: 5px;
+
+  overflow: hidden;
+
+  background: #ddd;
+
+  border-radius: 12px;
+}
+
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* ==================================================
+   Hero 不規則圖形
+================================================== */
+
+.hero-shape {
+  position: absolute;
+
+  width: 220px;
+
+  left: 0;
+  top: 0;
+
+  z-index: 3;
+}
+
+
+/* ==================================================
+   上方選單
+================================================== */
+
+.top-menu {
+  position: absolute;
+
+  right: 20px;
+  top: 18px;
+
+  z-index: 6;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 8px 10px;
+
+  background: var(--white);
+
+  border-radius: 8px;
+}
+
+
+.top-menu a {
+  color: var(--dark-green);
+
+  font-size: 7px;
+
+  font-weight: 700;
+}
+
+
+.top-menu button {
+  padding: 6px 14px;
+
+  border: 0;
+
+  border-radius: 5px;
+
+  background: var(--orange);
+
+  color: var(--white);
+
+  font-size: 7px;
+}
+
+
+/* ==================================================
+   Hero 文字
+================================================== */
+
+.hero-text {
+  position: absolute;
+
+  left: 20px;
+  top: 105px;
+
+  z-index: 5;
+}
+
+
+.hero-text h1 {
+  margin: 0 0 8px;
+
+  color: var(--dark-green);
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+
+.hero-text p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 7px;
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   搜尋區
+================================================== */
+
+.search-box {
+  position: absolute;
+
+  left: 5px;
+  bottom: 0;
+
+  z-index: 10;
+
+  width: 62%;
+
+  min-height: 45px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 8px;
+
+  padding: 8px 12px;
+
+  background: var(--white);
+
+  border-radius: 0 18px 0 0;
+}
+
+
+.search-item {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.search-item label {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 6px;
+
+  font-weight: 700;
+}
+
+
+.select-box {
+  height: 23px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 0 7px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 4px;
+
+  color: #aaa;
+
+  font-size: 6px;
+
+  white-space: nowrap;
+}
+
+
+.select-box i:last-child {
+  margin-left: auto;
+
+  color: var(--dark-green);
+}
+
+
+.search-btn {
+  height: 23px;
+
+  padding: 0 18px;
+
+  border: 0;
+
+  border-radius: 4px;
+
+  background: var(--main-green);
+
+  color: white;
+
+  font-size: 6px;
+
+  white-space: nowrap;
+}
+
+
+/* ==================================================
+   房源區
+================================================== */
+
+.house-section {
+  position: relative;
+
+  min-height: 720px;
+
+  padding: 55px 0 70px;
+
+  background: var(--bg);
+
+  overflow: hidden;
+}
+
+
+/* 背景不規則圖形 */
+
+.house-bg {
+  position: absolute;
+
+  right: -50px;
+  top: 100px;
+
+  width: 300px;
+
+  z-index: 0;
+}
+
+
+/* ==================================================
+   房源容器
+================================================== */
+
+.house-container {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 750px;
+}
+
+
+/* ==================================================
+   標題
+================================================== */
+
+.house-title {
+  position: relative;
+
+  width: 240px;
+  height: 65px;
+
+  margin-bottom: 10px;
+}
+
+
+.title-shape {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 95px;
+
+  height: 65px;
+
+  object-fit: contain;
+}
+
+
+.title-text {
+  position: absolute;
+
+  left: 45px;
+  top: 15px;
+
+  z-index: 2;
+}
+
+
+.title-text h2 {
+  margin: 0;
+
+  color: var(--dark-green);
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+.title-text p {
+  margin: 3px 0 0;
+
+  color: #777;
+
+  font-size: 6px;
+}
+
+
+/* ==================================================
+   篩選
+================================================== */
+
+.filter-buttons {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 6px;
+
+  margin-bottom: 15px;
+}
+
+
+.filter-buttons button {
+  min-width: 35px;
+
+  padding: 3px 8px;
+
+  border: 1px solid #d5d5d0;
+
+  border-radius: 20px;
+
+  background: white;
+
+  color: #777;
+
+  font-size: 6px;
+}
+
+
+.filter-buttons button.active {
+  border-color: var(--main-green);
+
+  background: var(--main-green);
+
+  color: white;
+}
+
+
+/* ==================================================
+   房源卡片
+================================================== */
+
+.house-list {
+  row-gap: 18px;
+}
+
+
+.house-card {
+  width: 100%;
+}
+
+
+.house-img {
+  position: relative;
+
+  width: 100%;
+
+  height: 95px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #ddd;
+}
+
+
+.house-img img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.house-img span {
+  position: absolute;
+
+  right: 5px;
+  bottom: 5px;
+
+  padding: 3px 7px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  color: var(--dark-green);
+
+  font-size: 5px;
+}
+
+
+.house-card h3 {
+  margin: 7px 0 2px;
+
+  color: var(--dark-green);
+
+  font-size: 8px;
+
+  font-weight: 800;
+}
+
+
+.location {
+  color: #999;
+
+  font-size: 5px;
+}
+
+
+.location i {
+  margin-right: 2px;
+}
+
+
+.price {
+  margin-top: 5px;
+
+  color: var(--dark-green);
+
+  font-size: 7px;
+}
+
+
+.price strong {
+  font-size: 12px;
+}
+
+
+.tags {
+  display: flex;
+
+  gap: 4px;
+
+  margin-top: 5px;
+}
+
+
+.tags span {
+  padding: 2px 7px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 10px;
+
+  background: white;
+
+  color: #888;
+
+  font-size: 5px;
+}
+
+
+/* ==================================================
+   分頁
+================================================== */
+
+.pagination {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 30px;
+}
+
+
+.pagination button {
+  padding: 2px 4px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #aaa;
+
+  font-size: 6px;
+}
+
+
+.pagination .page-active {
+  color: var(--orange);
+
+  font-weight: 800;
+}
+
+
+/* ==================================================
+   Footer
+================================================== */
+
+footer {
+  position: relative;
+
+  min-height: 150px;
+
+  padding: 55px 0 15px;
+
+  background: var(--main-green);
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* Footer 綠色不規則圖形 */
+
+.footer-shape {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 55%;
+
+  max-width: 480px;
+
+  z-index: 0;
+}
+
+
+.footer-container {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* ==================================================
+   Footer Logo
+================================================== */
+
+.footer-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: white;
+
+  font-size: 20px;
+
+  font-weight: 800;
+}
+
+
+.footer-logo i {
+  font-size: 25px;
+}
+
+
+.copyright {
+  margin: 12px 0 0;
+
+  font-size: 5px;
+}
+
+
+/* ==================================================
+   Footer 右邊
+================================================== */
+
+.footer-right {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+
+/* IG / FB */
+
+.social {
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+}
+
+
+.social a {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+
+  color: var(--main-green);
+
+  background: white;
+
+  font-size: 8px;
+}
+
+
+.social a:hover {
+  background: var(--orange);
+
+  color: white;
+}
+
+
+/* Footer 選單 */
+
+.footer-links {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 15px;
+}
+
+
+.footer-links a {
+  color: white;
+
+  font-size: 6px;
+}
+
+
+/* ==================================================
+   平板
+================================================== */
+
+@media (max-width: 991px) {
+
+  .hero-container {
+    min-height: 420px;
+  }
+
+
+  .hero-image {
+    height: 350px;
+  }
+
+
+  .search-box {
+    width: 75%;
+  }
+
+
+  .house-container {
+    max-width: 680px;
+  }
+
+
+  .house-img {
+    height: 100px;
+  }
+
+}
+
+
+/* ==================================================
+   手機
+================================================== */
+
+@media (max-width: 767px) {
+
+  .hero {
+    padding: 5px 5px 0;
+  }
+
+
+  .hero-container {
+    min-height: 600px;
+  }
+
+
+  .hero-image {
+    height: 330px;
+
+    width: calc(100% - 10px);
+  }
+
+
+  .logo {
+    left: 15px;
+    top: 15px;
+  }
+
+
+  .top-menu {
+    right: 15px;
+
+    gap: 7px;
+
+    padding: 6px 7px;
+  }
+
+
+  .top-menu a {
+    font-size: 5px;
+  }
+
+
+  .top-menu button {
+    padding: 5px 8px;
+
+    font-size: 5px;
+  }
+
+
+  .hero-text {
+    left: 20px;
+    top: 105px;
+  }
+
+
+  .hero-text h1 {
+    font-size: 20px;
+  }
+
+
+  .hero-text p {
+    font-size: 7px;
+  }
+
+
+  /* 搜尋變成兩排 */
+
+  .search-box {
+    width: calc(100% - 10px);
+
+    left: 5px;
+
+    bottom: 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 7px;
+
+    padding: 12px;
+
+    border-radius: 12px 12px 0 0;
+  }
+
+
+  .search-btn {
+    width: 100%;
+  }
+
+
+  .search-item label {
+    font-size: 6px;
+  }
+
+
+  /* 房源 */
+
+  .house-section {
+    padding-top: 45px;
+  }
+
+
+  .house-title {
+    margin: 0 auto 15px;
+  }
+
+
+  .filter-buttons {
+    justify-content: center;
+
+    margin-bottom: 25px;
+  }
+
+
+  .house-list {
+    row-gap: 25px;
+  }
+
+
+  .house-img {
+    height: 180px;
+  }
+
+
+  .house-card h3 {
+    font-size: 11px;
+  }
+
+
+  .location {
+    font-size: 7px;
+  }
+
+
+  .price {
+    font-size: 8px;
+  }
+
+
+  .price strong {
+    font-size: 14px;
+  }
+
+
+  .tags span {
+    font-size: 6px;
+  }
+
+
+  /* Footer */
+
+  footer {
+    padding: 45px 0 20px;
+  }
+
+
+  .footer-right {
+    align-items: flex-start;
+
+    margin-top: 25px;
+  }
+
+
+  .social {
+    justify-content: flex-start;
+  }
+
+
+  .footer-links {
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+}
+
+
+/* ==================================================
+   小手機
+================================================== */
+
+@media (max-width: 400px) {
+
+  .hero-container {
+    min-height: 580px;
+  }
+
+
+  .hero-image {
+    height: 300px;
+  }
+
+
+  .hero-text h1 {
+    font-size: 18px;
+  }
+
+
+  .search-box {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .house-img {
+    height: 150px;
+  }
+
+
+  .filter-buttons {
+    gap: 4px;
+  }
+
+
+  .filter-buttons button {
+    min-width: 30px;
+
+    padding: 3px 6px;
+  }
+
+}

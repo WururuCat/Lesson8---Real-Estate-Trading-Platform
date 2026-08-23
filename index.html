@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ISHIMA 找到您的夢想家園</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./scss/reset.css" />
+    <link rel="stylesheet" href="./scss/style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         Hero
+    ========================== -->
+    <section class="hero">
+      <div class="hero-box">
+        <!-- 背景圖片 -->
+        <div class="hero-bg">
+          <img src="./img/index-m_Hero Image.png" alt="夢想家園" />
+        </div>
+
+        <!-- 白色不規則圖形 -->
+        <div class="hero-shape">
+          <img src="./img/bg.png" alt="" />
+        </div>
+
+        <!-- Logo -->
+        <div class="hero-logo">
+          <img src="./img/logo.png" alt="ISHIMA" />
+        </div>
+
+        <!-- 電腦版選單 -->
+        <div class="hero-menu">
+          <a href="#house">好房查詢</a>
+
+          <a href="#loan">房貸試算</a>
+
+          <button>登入/註冊</button>
+        </div>
+
+        <!-- 手機漢堡 -->
+        <button
+          class="hamburger"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-label="開啟選單"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+
+        <!-- Hero文字 -->
+        <div class="hero-text">
+          <h1>找到您的夢想家園</h1>
+
+          <p>
+            上千筆精選房源、專業預約看房服務、即時房貸試算，
+            <br />
+            讓您輕鬆找到理想住宅
+          </p>
+        </div>
+      </div>
+
+      <!-- =========================
+           搜尋
+      ========================== -->
+
+      <div class="search-box">
+        <div class="row g-2">
+          <!-- 地區 -->
+          <div class="col-6 col-md">
+            <label>地區</label>
+
+            <div class="select-box">
+              <i class="bi bi-geo-alt"></i>
+
+              <select>
+                <option>請選擇地區</option>
+                <option>基隆市</option>
+                <option>台北市</option>
+                <option>新北市</option>
+                <option>桃園市</option>
+                <option>新竹市</option>
+              </select>
+
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- 房型 -->
+          <div class="col-6 col-md">
+            <label>房型</label>
+
+            <div class="select-box">
+              <i class="bi bi-house"></i>
+
+              <select>
+                <option>請選擇房型</option>
+                <option>公寓</option>
+                <option>透天</option>
+                <option>大樓</option>
+                <option>別墅</option>
+              </select>
+
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- 房間數 -->
+          <div class="col-6 col-md">
+            <label>房間數</label>
+
+            <div class="select-box">
+              <i class="bi bi-door-open"></i>
+
+              <select>
+                <option>房間數</option>
+                <option>1房</option>
+                <option>2房</option>
+                <option>3房</option>
+                <option>4房以上</option>
+              </select>
+
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- 價格 -->
+          <div class="col-6 col-md">
+            <label>價格</label>
+
+            <div class="select-box">
+              <i class="bi bi-currency-dollar"></i>
+
+              <select>
+                <option>價格區間</option>
+                <option>500萬以下</option>
+                <option>500-1000萬</option>
+                <option>1000-2000萬</option>
+                <option>2000萬以上</option>
+              </select>
+
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- 搜尋 -->
+          <div class="col-12 col-md-auto">
+            <button class="search-btn">
+              搜尋房源
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         為什麼選擇我們
+    ========================== -->
+
+    <section class="why-us">
+      <div class="container">
+        <div class="why-title">
+          <div class="why-shape">
+            <img src="./img/display-1.png" alt="" />
+          </div>
+
+          <div>
+            <h2>為什麼選擇我們</h2>
+            <p>專業服務．值得信賴</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center feature-row">
+          <!-- 1 -->
+          <div class="col-6 col-md-3">
+            <div class="feature">
+              <img src="./img/display2.png" alt="" />
+
+              <div class="feature-content">
+                <div class="feature-icon">
+                  <i class="bi bi-house-heart"></i>
+                </div>
+
+                <h3>精選物件</h3>
+
+                <p>
+                  嚴選優質房源<br />
+                  提供多樣化選擇
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="col-6 col-md-3">
+            <div class="feature">
+              <img src="./img/display3.png" alt="" />
+
+              <div class="feature-content">
+                <div class="feature-icon">
+                  <i class="bi bi-people"></i>
+                </div>
+
+                <h3>專業團隊</h3>
+
+                <p>
+                  經驗豐富團隊<br />
+                  提供專業服務
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="col-6 col-md-3">
+            <div class="feature">
+              <img src="./img/display4.png" alt="" />
+
+              <div class="feature-content">
+                <div class="feature-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+
+                <h3>市場洞察</h3>
+
+                <p>
+                  掌握市場資訊<br />
+                  幫助做出決定
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="col-6 col-md-3">
+            <div class="feature">
+              <img src="./img/display5.png" alt="" />
+
+              <div class="feature-content">
+                <div class="feature-icon">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+
+                <h3>交易保障</h3>
+
+                <p>
+                  完整交易流程<br />
+                  讓您安心購屋
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         精選房源
+    ========================== -->
+
+    <section class="houses" id="house">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- 左邊 -->
+          <div class="col-12 col-md-4">
+            <div class="house-main">
+              <img src="./img/index-img_house.png" alt="精選房源" />
+
+              <div class="house-main-text">
+                <h2>精選房源</h2>
+
+                <p>為您精選優質房屋</p>
+
+                <button>
+                  查看更多
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+
+                <strong>999+</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右邊 -->
+          <div class="col-12 col-md-8">
+            <div class="row g-2">
+              <!-- 房屋1 -->
+              <div class="col-4">
+                <div class="house-card">
+                  <div class="card-img">
+                    <img src="./img/index-img_house.png" alt="房屋圖片" />
+                  </div>
+
+                  <p>景觀套房</p>
+
+                  <h3>NT$ 1,500 萬</h3>
+
+                  <div class="card-info">
+                    <span>2 房</span>
+                    <span>2 廳</span>
+                    <span>45 坪</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 房屋2 -->
+              <div class="col-4">
+                <div class="house-card">
+                  <div class="card-img">
+                    <img src="./img/index-img_house2.png" alt="房屋圖片" />
+                  </div>
+
+                  <p>現代豪華大樓</p>
+
+                  <h3>NT$ 1,200 萬</h3>
+
+                  <div class="card-info">
+                    <span>3 房</span>
+                    <span>2 廳</span>
+                    <span>52 坪</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 房屋3 -->
+              <div class="col-4">
+                <div class="house-card">
+                  <div class="card-img">
+                    <img src="./img/index-img_house3.png" alt="房屋圖片" />
+                  </div>
+
+                  <p>溫馨美宅</p>
+
+                  <h3>NT$ 2,000 萬</h3>
+
+                  <div class="card-info">
+                    <span>3 房</span>
+                    <span>2 廳</span>
+                    <span>50 坪</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 左右按鈕 -->
+            <div class="house-buttons">
+              <button>
+                <i class="bi bi-arrow-left"></i>
+              </button>
+
+              <button>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         房貸試算
+    ========================== -->
+
+    <section class="loan-section" id="loan">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- 左邊圖片 -->
+          <div class="col-12 col-md-5">
+            <div class="loan-image">
+              <img src="./img/search-house3-1.png" alt="" />
+            </div>
+          </div>
+
+          <!-- 右邊 -->
+          <div class="col-12 col-md-7">
+            <div class="loan-content">
+              <h2>房貸試算工具</h2>
+              <p>輕鬆計算您的月付金額，提前規劃購屋預算</p>
+              <div class="row loan-items">
+                <div class="col-4">
+                  <div class="loan-item">
+                    <div class="loan-icon">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+
+                    <h3>多元試算方案</h3>
+
+                    <p>
+                      多種房貸方案<br />
+                      幫您輕鬆比較
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="col-4">
+                  <div class="loan-item">
+                    <div class="loan-icon">
+                      <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h3>即時利率資訊</h3>
+
+                    <p>
+                      整合各大銀行<br />
+                      最新房貸利率
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="col-4">
+                  <div class="loan-item">
+                    <div class="loan-icon">
+                      <i class="bi bi-card-checklist"></i>
+                    </div>
+
+                    <h3>詳細還款計畫</h3>
+
+                    <p>
+                      提前預估<br />
+                      掌握每月負擔
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <button class="green-btn">
+                立即試算
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         理想住宅
+    ========================== -->
+
+    <section class="dream-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- 左 -->
+          <div class="col-12 col-md-5">
+            <div class="dream-box">
+              <div class="dream-text">
+                <h2>
+                  準備好找到您的<br />
+                  理想住宅了嗎？
+                </h2>
+
+                <p>
+                  加入我們，開始您的購屋之旅，<br />
+                  讓專業團隊協助您實現夢想
+                </p>
+
+                <div class="dream-buttons">
+                  <button class="outline-btn">
+                    房貸試算
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+
+                  <button class="green-btn">
+                    開始尋找房源
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右 -->
+          <div class="col-12 col-md-7">
+            <div class="dream-image">
+              <img src="./img/search-house9.png" alt="理想住宅" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer>
+      <div class="container">
+        <div class="row align-items-end">
+          <!-- Logo -->
+          <div class="col-12 col-md-6">
+            <div class="footer-logo">
+              <img src="./img/logo-1.png" alt="ISHIMA" />
+            </div>
+            <p>copyright © 2026 ISHIMA 房地產 All Rights Reserved.</p>
+          </div>
+
+          <!-- 右邊 -->
+          <div class="col-12 col-md-6">
+            <div class="footer-right">
+              <!-- 社群 -->
+              <div class="social">
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </div>
+              <!-- 選單 -->
+              <div class="footer-links">
+                <a href="#house">好房查詢</a>
+                <a href="#loan">房貸試算</a>
+                <a href="#">隱私權政策</a>
+                <a href="#">常見問題</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 手機 Offcanvas 漢堡選單 -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+      <div class="offcanvas-header">
+        <img src="./img/logo.png" alt="ISHIMA" />
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <a href="#house" data-bs-dismiss="offcanvas"> 好房查詢 </a>
+        <a href="#loan" data-bs-dismiss="offcanvas"> 房貸試算 </a>
+        <a href="#" data-bs-dismiss="offcanvas"> 隱私權政策 </a>
+        <button>登入 / 註冊</button>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
